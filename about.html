@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="من نحن - سلطان كلين لخدمات النظافة والتعقيم الشامل بالمملكة.">
-    <title>من نحن | سلطان كلين</title>
+    <meta name="description"
+        content="من نحن - شركة سلطان كلين الرائدة في تقديم خدمات النظافة والتعقيم الشامل بالمملكة العربية السعودية، خبرة تفوق 10 سنوات، كوادر فنية مدربة وأحدث التقنيات الألمانية والإيطالية.">
+    <title>من نحن | سلطان كلين لخدمات النظافة والتعقيم الشامل</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome Icons -->
@@ -22,11 +23,178 @@
 
     <!-- Custom Theme CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Dedicated About Page Enhanced Styles */
+        .vision-mission-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 22px;
+            padding: 36px 26px;
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 16px rgba(11, 61, 145, 0.04);
+        }
+
+        .vision-mission-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 5px;
+            background: var(--border-color);
+            transition: height 0.3s ease;
+        }
+
+        .vision-card::before {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .mission-card::before {
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+        }
+
+        .goals-card::before {
+            background: linear-gradient(90deg, #f59e0b, #fbbf24);
+        }
+
+        .values-card::before {
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+        }
+
+        .vision-mission-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 36px rgba(11, 61, 145, 0.12);
+            border-color: rgba(0, 180, 230, 0.4);
+        }
+
+        .vision-mission-card:hover::before {
+            height: 7px;
+        }
+
+        .vm-icon-bubble {
+            width: 68px;
+            height: 68px;
+            border-radius: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.85rem;
+            margin-bottom: 22px;
+            transition: all 0.3s ease;
+        }
+
+        .vision-mission-card:hover .vm-icon-bubble {
+            transform: scale(1.1) rotate(-6deg);
+        }
+
+        /* Quality Standards Cards */
+        .standard-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 28px 24px;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 4px 14px rgba(11, 61, 145, 0.03);
+        }
+
+        .standard-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--secondary-color);
+            box-shadow: 0 12px 30px rgba(11, 61, 145, 0.08);
+        }
+
+        .standard-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+        }
+
+        /* Guarantee Box */
+        .guarantee-card {
+            background: #ffffff;
+            border: 1.5px dashed rgba(11, 61, 145, 0.22);
+            border-radius: 20px;
+            padding: 28px 22px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .guarantee-card:hover {
+            border-color: var(--primary-color);
+            border-style: solid;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(11, 61, 145, 0.08);
+        }
+
+        /* Process Steps */
+        .process-step-box {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px 24px;
+            position: relative;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .process-step-box:hover {
+            transform: translateY(-6px);
+            border-color: var(--secondary-color);
+            box-shadow: 0 12px 30px rgba(11, 61, 145, 0.08);
+        }
+
+        .step-number-badge {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: #ffffff;
+            font-weight: 900;
+            font-size: 1.25rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            box-shadow: 0 6px 16px rgba(11, 61, 145, 0.25);
+        }
+
+        /* Stat Cards */
+        .stat-about-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(11, 61, 145, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .stat-about-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--secondary-color);
+            box-shadow: 0 12px 28px rgba(11, 61, 145, 0.1);
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Top Announcement Bar -->
+    <!-- ==========================================================================
+       TOP ANNOUNCEMENT BAR
+       ========================================================================== -->
     <div class="bg-brand-primary py-2 text-white border-bottom border-white border-opacity-10 small">
         <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
             <div class="d-flex align-items-center gap-2">
@@ -34,52 +202,72 @@
                 <span>خصم خاص <strong>35%</strong> على جميع خدمات التنظيف والتعقيم الشامل!</span>
             </div>
             <div class="d-none d-md-flex align-items-center gap-4">
-                <a href="tel:+966582102525" class="text-white text-decoration-none fw-semibold"><i
-                        class="fa-solid fa-phone-volume text-brand-secondary me-1"></i> 0582102525</a>
+                <a href="tel:+966582102525" class="text-white text-decoration-none fw-semibold">
+                    <i class="fa-solid fa-phone-volume text-brand-secondary me-1"></i> 0582102525
+                </a>
                 <a href="https://wa.me/966582102525" target="_blank"
-                    class="text-white text-decoration-none fw-semibold"><i
-                        class="fa-brands fa-whatsapp text-brand-accent me-1"></i> خدمة 24/7</a>
+                    class="text-white text-decoration-none fw-semibold">
+                    <i class="fa-brands fa-whatsapp text-brand-accent me-1"></i> خدمة 24/7
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Navbar -->
+    <!-- ==========================================================================
+       NAVBAR (BOOTSTRAP 5)
+       ========================================================================== -->
     <nav class="navbar navbar-expand-lg sticky-top main-navbar py-3 shadow-sm">
         <div class="container">
+            <!-- Brand Logo -->
             <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index.html">
-                <div class="rounded-3 bg-brand-primary text-white d-flex align-items-center justify-content-center"
-                    style="width: 44px; height: 44px; font-size: 1.3rem;">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
                 <div>
-                    <div class="fw-heading fs-4 text-brand-primary lh-1">سلطان <span
-                            class="text-brand-secondary">كلين</span>
+                    <div class="fw-heading fs-4 text-brand-primary lh-1">
+                        سلطان <span class="text-brand-secondary">كلين</span>
                     </div>
-                    <small class="text-muted fw-semibold" style="font-size: 0.72rem;">لخدمات النظافة والتعقيم
+                    <small class="text-muted fw-semibold" style="font-size: 0.72rem">لخدمات النظافة والتعقيم
                         الشامل</small>
                 </div>
             </a>
 
+            <!-- Mobile Toggle -->
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#mainNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- Nav Links -->
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold">
-                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">خدماتنا <span
-                                class="badge bg-brand-accent rounded-pill ms-1" style="font-size: 0.7rem;">خصم
-                                35%</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#features">مميزاتنا</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">المدونة</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">من نحن</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#features">مميزاتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#before-after">أعمالنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#reviews">آراء العملاء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
                 </ul>
 
                 <!-- Single Action CTA in Navbar -->
                 <div class="d-flex align-items-center">
-                    <a href="tel:+966582102525" class="btn btn-brand-primary d-inline-flex align-items-center gap-2 px-4 py-2">
+                    <a href="tel:+966582102525"
+                        class="btn btn-brand-primary d-inline-flex align-items-center gap-2 px-4 py-2">
                         <i class="fa-solid fa-phone-volume"></i>
                         <span>اتصل بنا الآن</span>
                     </a>
@@ -88,90 +276,766 @@
         </div>
     </nav>
 
-    <!-- Page Banner -->
-    <section class="bg-brand-primary text-white py-5 text-center">
-        <div class="container py-3">
-            <h1 class="display-5 fw-heading text-white mb-2">من نحن - سلطان كلين</h1>
-            <p class="lead text-white text-opacity-75 fs-6 max-w-700 mx-auto mb-3">نضع معايير النظافة والتعقيم الفندقي
-                بين
-                يديك بخبرة عريقة وأحدث التقنيات الحديثة.</p>
+    <!-- ==========================================================================
+       PAGE HEADER BANNER
+       ========================================================================== -->
+    <section class="bg-brand-primary text-white py-5 text-center position-relative overflow-hidden">
+        <div class="container py-4 position-relative z-1">
+            <span class="badge bg-brand-accent text-white px-3 py-2 rounded-pill fw-bold mb-3">
+                <i class="fa-solid fa-shield-heart me-1"></i> مسيرة حافلة بالثقة والتميز
+            </span>
+            <h1 class="display-5 fw-heading text-white mb-2">من نحن - شركة سلطان كلين</h1>
+            <p class="lead text-white text-opacity-75 fs-6 max-w-700 mx-auto mb-3">
+                نضع معايير النظافة والتعقيم الفندقي بين يديك بخبرة تفوق 10 سنوات، كوادر متخصصة، وأحدث المعدات العالمية.
+            </p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0 small">
+                    <li class="breadcrumb-item"><a href="index.html"
+                            class="text-brand-secondary text-decoration-none">الرئيسية</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">من نحن</li>
+                </ol>
+            </nav>
         </div>
     </section>
 
-    <!-- About Story -->
-    <section class="py-5">
+    <!-- ==========================================================================
+       ABOUT STORY & INTRO
+       ========================================================================== -->
+    <section class="py-5 bg-white">
         <div class="container py-4">
             <div class="row align-items-center g-5">
+                <!-- Text Content -->
                 <div class="col-lg-6">
-                    <span class="badge bg-brand-light text-brand-primary rounded-pill px-3 py-2 fw-bold mb-2">
-                        <i class="fa-solid fa-shield-heart me-1"></i> قصتنا ورؤيتنا
+                    <span class="badge bg-brand-light text-brand-primary border border-brand rounded-pill px-3 py-2 fw-bold mb-3">
+                        <i class="fa-solid fa-crown text-warning me-1"></i> الريادة والخبرة العريقة
                     </span>
-                    <h2 class="fw-heading display-6 text-brand-primary mb-3">أكثر من 10 سنوات من الريادة في خدمات
-                        النظافة الملكية
+                    <h2 class="fw-heading display-6 text-brand-primary mb-3 lh-base">
+                        نبتكر حلول نظافة متكاملة <br>
+                        <span class="text-brand-secondary">تمنح منزلك ومقر عملك بريقاً فندقياً يدوم</span>
                     </h2>
+                    <p class="text-secondary lh-lg mb-3">
+                        انطلقت <strong>سلطان كلين</strong> لتضع مفهوماً جديداً ومتميزاً لخدمات النظافة والتعقيم الشامل بالمملكة العربية السعودية؛ مفهوم يتجاوز التنظيف السطحي التقليدي إلى العناية الفائقة بأدق التفاصيل والتعقيم الصحي المتطور الذي يحمي صحة أسرتك ويوفر بيئة عمل مريحة ومثالية.
+                    </p>
                     <p class="text-secondary lh-lg mb-4">
-                        تأسست شركة <strong>سلطان كلين</strong> برؤية واضحة: تقديم خدمات تنظيف وتعقيم تتطابق مع أعلى
-                        المواصفات
-                        العالمية. بفضل فريقنا المتفاني وأحدث التقنيات الألمانية والإيطالية، أصبحت شركتنا الخيار الأول
-                        لآلاف العائلات
-                        والشركات في المملكة.
+                        نعتمد على مزيج متكامل يجمع بين <strong>الكوادر الفنية النظامية المدربة</strong> وأحدث <strong>أجهزة البخار الحار وضغط المياه الألمانية والإيطالية</strong>، بالإضافة إلى استخدام مواد ومطهرات مصرحة وصديقة للبيئة بنسبة 100%، مع التزامنا التام بالمواعيد والضمان الذهبي لإتقان العمل.
                     </p>
 
-                    <div class="d-flex flex-column gap-3 mb-4">
-                        <div class="d-flex gap-3 align-items-start">
-                            <i class="fa-solid fa-circle-check text-brand-accent fs-4 mt-1"></i>
-                            <div>
-                                <h5 class="fw-bold mb-1">رؤيتنا</h5>
-                                <p class="text-secondary small mb-0">أن نكون الشركة الأكثر موثوقية وجودة في خدمات
-                                    النظافة والتعقيم
-                                    الشامل على مستوى المملكة.</p>
+                    <!-- Trust Checkpoints -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 text-brand-primary fw-bold small">
+                                <i class="fa-solid fa-circle-check text-brand-accent fs-5"></i>
+                                <span>عمالة نظامية مدربة ومؤمنة بالكامل</span>
                             </div>
                         </div>
-                        <div class="d-flex gap-3 align-items-start">
-                            <i class="fa-solid fa-circle-check text-brand-accent fs-4 mt-1"></i>
-                            <div>
-                                <h5 class="fw-bold mb-1">رسالتنا</h5>
-                                <p class="text-secondary small mb-0">توفير بيئة نظيفة وصحية وآمنة بأسعار عادلة وبدون
-                                    تعقيد، مع الالتزام
-                                    التام بالمواعيد وضمان الرضا 100%.</p>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 text-brand-primary fw-bold small">
+                                <i class="fa-solid fa-circle-check text-brand-accent fs-5"></i>
+                                <span>معاينة وتقييم مجاني بدون أي التزام</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 text-brand-primary fw-bold small">
+                                <i class="fa-solid fa-circle-check text-brand-accent fs-5"></i>
+                                <span>أجهزة شفط وبخار حديثة 100%</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 text-brand-primary fw-bold small">
+                                <i class="fa-solid fa-circle-check text-brand-accent fs-5"></i>
+                                <span>ضمان إعادة العمل مجاناً في حال وجود ملاحظات</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Quick Actions -->
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="https://wa.me/966582102525" target="_blank" class="btn btn-brand-whatsapp"><i
-                                class="fa-brands fa-whatsapp me-1"></i> تواصل عبر واتساب</a>
-                        <a href="tel:+966582102525" class="btn btn-brand-primary"><i class="fa-solid fa-phone me-1"></i>
-                            اتصال
-                            مباشر</a>
+                        <a href="https://wa.me/966582102525?text=مرحباً%20سلطان%20كلين،%20أود%20طلب%20معاينة%20مجانية%20مع%20خصم%2035%"
+                            target="_blank" class="btn btn-brand-whatsapp btn-lg rounded-pill px-4 shadow-sm">
+                            <i class="fa-brands fa-whatsapp fs-5 me-2"></i> استشارة ومعاينة عبر واتساب
+                        </a>
+                        <a href="tel:+966582102525" class="btn btn-outline-brand btn-lg rounded-pill px-4">
+                            <i class="fa-solid fa-phone-volume me-2"></i> 0582102525
+                        </a>
                     </div>
                 </div>
 
+                <!-- Visual Side with Experience Badge -->
                 <div class="col-lg-6">
-                    <div class="hero-img-box">
-                        <img src="images/hero.jpg" alt="طاقم سلطان كلين">
+                    <div class="position-relative">
+                        <div class="hero-img-box position-relative">
+                            <img src="images/hero.jpg" alt="طاقم سلطان كلين للنظافة الشاملة" class="img-fluid">
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3"
+                                style="background: linear-gradient(to top, rgba(11,61,145,0.92), transparent); border-radius: 0 0 24px 24px;">
+                                <div class="text-white d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div class="fw-bold fs-6">سلطان كلين - نعتني بأدق التفاصيل</div>
+                                        <small class="text-white-50">نظافة متكاملة للشقق، الفلل، والمؤسسات</small>
+                                    </div>
+                                    <span class="badge bg-brand-accent px-3 py-2 fs-6">خصم 35%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Experience Badge -->
+                        <div class="hero-badge hero-badge-1 bg-white p-3 rounded-4 shadow border border-brand d-none d-sm-flex align-items-center gap-3 position-absolute top-0 start-0 translate-middle-y">
+                            <div class="badge-icon bg-brand-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center"
+                                style="width: 48px; height: 48px;">
+                                <i class="fa-solid fa-medal fs-4"></i>
+                            </div>
+                            <div>
+                                <div class="fw-bold text-brand-primary fs-6">+10 سنوات خبرة</div>
+                                <small class="text-muted">ريادة واحترافية بالمملكة</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ==========================================================================
+       ENHANCED VISION, MISSION, GOALS & CORE VALUES (STUNNING 4-CARD GRID)
+       ========================================================================== -->
+    <section class="py-5 bg-brand-light" id="vision-mission">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="badge bg-brand-primary text-white rounded-pill px-3 py-2 fw-bold mb-2">
+                    <i class="fa-solid fa-compass me-1"></i> ميثاق التميز والجودة
+                </span>
+                <h2 class="fw-heading display-6 text-brand-primary mb-2">رؤيتنا، رسالتنا، أهدافنا، وقيمنا الجوهرية</h2>
+                <p class="text-secondary">المبادئ الراسخة التي تحرك فريقنا يومياً لتقديم تجربة استثنائية تفوق توقعاتك</p>
+                <div class="mx-auto bg-brand-secondary rounded-pill" style="width: 50px; height: 3.5px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- 1. Our Vision -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="vision-mission-card vision-card">
+                        <div class="vm-icon-bubble bg-brand-light text-brand-primary">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="fw-heading fs-5 text-brand-primary mb-2">رؤيتنا المستقبلية</h3>
+                        <p class="text-secondary small lh-lg mb-3 flex-grow-1">
+                            أن نكون الاسم الأول والخيار الأكثر ثقة في قطاع خدمات النظافة والتعقيم الفندقي المتخصص بالمملكة، ونموذجاً يحتذى به في تبني الحلول البيئية والتقنيات الحديثة.
+                        </p>
+                        <div class="pt-3 border-top border-brand d-flex align-items-center gap-2 text-brand-primary fw-bold small">
+                            <i class="fa-solid fa-arrow-left text-brand-secondary"></i>
+                            <span>ريادة مستدامة وجودة لا تُضاهى</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Our Mission -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="vision-mission-card mission-card">
+                        <div class="vm-icon-bubble bg-brand-light text-brand-secondary">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="fw-heading fs-5 text-brand-primary mb-2">رسالتنا للمجتمع</h3>
+                        <p class="text-secondary small lh-lg mb-3 flex-grow-1">
+                            توفير بيئة نظيفة وصحية وآمنة تماماً لكل أسرة ومنشأة، عبر تقديم حلول تنظيف احترافية بمعدات عالمية ومواد آمنة بنسبة 100% وبأسعار عادلة تناسب الجميع.
+                        </p>
+                        <div class="pt-3 border-top border-brand d-flex align-items-center gap-2 text-brand-primary fw-bold small">
+                            <i class="fa-solid fa-arrow-left text-brand-secondary"></i>
+                            <span>بيئة صحية وراحة بال دائمة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Strategic Goals -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="vision-mission-card goals-card">
+                        <div class="vm-icon-bubble bg-brand-light text-warning">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="fw-heading fs-5 text-brand-primary mb-2">أهدافنا الاستراتيجية</h3>
+                        <p class="text-secondary small lh-lg mb-3 flex-grow-1">
+                            التطوير المستمر لكفاءة فرق العمل، توسيع نطاق التغطية لجميع مناطق المملكة، واستخدام أحدث روبوتات وأجهزة التنظيف الذكية لتقليل وقت الإنجاز ومضاعفة النقاء.
+                        </p>
+                        <div class="pt-3 border-top border-brand d-flex align-items-center gap-2 text-brand-primary fw-bold small">
+                            <i class="fa-solid fa-arrow-left text-brand-secondary"></i>
+                            <span>تطوير متواصل وسرعة قياسية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Our Core Values -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="vision-mission-card values-card">
+                        <div class="vm-icon-bubble bg-brand-light text-brand-accent">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="fw-heading fs-5 text-brand-primary mb-2">قيمنا الأساسية</h3>
+                        <p class="text-secondary small lh-lg mb-3 flex-grow-1">
+                            الأمانة والإتقان، احترام خصوصية المنازل، الشفافية التامة في الأسعار، والالتزام الصارم بالمواعيد لضمان الرضا الكامل لعملائنا في كل زيارة.
+                        </p>
+                        <div class="pt-3 border-top border-brand d-flex align-items-center gap-2 text-brand-primary fw-bold small">
+                            <i class="fa-solid fa-arrow-left text-brand-secondary"></i>
+                            <span>مبادئ ثابتة وأمانة مطلقة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       STATISTICS & ACHIEVEMENTS COUNTERS
+       ========================================================================== -->
+    <section class="py-5 bg-white">
+        <div class="container py-3">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="stat-about-card">
+                        <div class="text-brand-primary display-5 fw-bold mb-1">+1,500</div>
+                        <div class="fw-bold text-dark fs-6 mb-1">فيلا ومنزل تم تنظيفه</div>
+                        <small class="text-muted">بأعلى معايير الإتقان والفخامة</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-about-card">
+                        <div class="text-brand-secondary display-5 fw-bold mb-1">99.4%</div>
+                        <div class="fw-bold text-dark fs-6 mb-1">نسبة رضا العملاء</div>
+                        <small class="text-muted">تقييمات موثقة وممتازة</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-about-card">
+                        <div class="text-brand-accent display-5 fw-bold mb-1">+50</div>
+                        <div class="fw-bold text-dark fs-6 mb-1">فني وعامل محترف</div>
+                        <small class="text-muted">كوادر نظامية مدربة ومؤمنة</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-about-card">
+                        <div class="text-brand-primary display-5 fw-bold mb-1">24/7</div>
+                        <div class="fw-bold text-dark fs-6 mb-1">خدمة واستجابة فورية</div>
+                        <small class="text-muted">جاهزون لتلبية طلبك في أي وقت</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       QUALITY & SAFETY STANDARDS SECTION (NEW SECTION)
+       ========================================================================== -->
+    <section class="py-5 bg-brand-light">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="badge bg-brand-primary text-white rounded-pill px-3 py-2 fw-bold mb-2">
+                    <i class="fa-solid fa-microscope me-1"></i> الدقة والمعايير العالمية
+                </span>
+                <h2 class="fw-heading display-6 text-brand-primary mb-2">معايير الجودة والسلامة التي نلتزم بها</h2>
+                <p class="text-secondary">نطبق أعلى بروتوكولات السلامة والتعقيم المعتمدة عالمياً لحماية منزلك وصحة عائلتك</p>
+                <div class="mx-auto bg-brand-secondary rounded-pill" style="width: 50px; height: 3.5px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Standard 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="standard-card">
+                        <div class="standard-icon bg-brand-light text-brand-primary">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h4 class="fw-bold text-brand-primary fs-5 mb-2">مواد آمنة ومصرحة 100%</h4>
+                        <p class="text-secondary small mb-0 lh-lg">
+                            نستخدم محاليل ومطهرات خالية من المواد الكيميائية الضارة، آمنة تماماً على الأطفال والرضع وكبار السن والحيوانات الأليفة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Standard 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="standard-card">
+                        <div class="standard-icon bg-brand-light text-brand-secondary">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h4 class="fw-bold text-brand-primary fs-5 mb-2">معدات ألمانية وإيطالية</h4>
+                        <p class="text-secondary small mb-0 lh-lg">
+                            ماكينات ضغط البخار الحار Kärcher وماكينات جلي وتلميع الرخام الإيطالية Klindex بأقراص الألماس لنتائج براقة استثنائية.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Standard 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="standard-card">
+                        <div class="standard-icon bg-brand-light text-brand-accent">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <h4 class="fw-bold text-brand-primary fs-5 mb-2">قائمة فحص من 30 نقطة</h4>
+                        <p class="text-secondary small mb-0 lh-lg">
+                            يخضع كل منزل لفحص دقيق ومطابقة شاملة عبر قائمة فحص الجودة المعتمدة قبل تسليم العمل للعميل لضمان عدم إغفال أي زاوية.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Standard 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="standard-card">
+                        <div class="standard-icon bg-brand-light text-warning">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h4 class="fw-bold text-brand-primary fs-5 mb-2">كوادر مؤهلة بزي معقم</h4>
+                        <p class="text-secondary small mb-0 lh-lg">
+                            طواقم عمل ترتدي الزي الموحد ووسائل الحماية الصحية والكمامات والأغطية الواقية للحفاظ التام على أعلى درجات النظافة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       HOW WE WORK (OUR 4-STEP QUALITY PROCESS)
+       ========================================================================== -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="badge bg-brand-primary text-white rounded-pill px-3 py-2 fw-bold mb-2">
+                    <i class="fa-solid fa-list-check me-1"></i> منهجية العمل المعتمدة
+                </span>
+                <h2 class="fw-heading display-6 text-brand-primary mb-2">كيف نضمن لك أعلى مستويات النظافة؟</h2>
+                <p class="text-secondary">خطوات عمل مدروسة ومنظمة تضمن تنفيذ العمل بسلاسة واحترافية فائقة</p>
+                <div class="mx-auto bg-brand-secondary rounded-pill" style="width: 50px; height: 3.5px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Step 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step-box">
+                        <div class="step-number-badge">1</div>
+                        <h4 class="fw-bold text-brand-primary fs-5 mb-2">المعاينة والتخطيط</h4>
+                        <p class="text-secondary small mb-0 lh-lg">
+                            معاينة مجانية للموقع لتحديد المساحة، نوع البقع والأسطح، وتجهيز خطة العمل المناسبة واختيار الفريق المناسب.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step-box">
+                        <div class="step-number-badge" style="background: var(--secondary-color);">2</div>
+                        <h4 class="fw-bold text-brand-primary fs-5 mb-2">تجهيز المواد والمعدات</h4>
+                        <p class="text-secondary small mb-0 lh-lg">
+                            اختيار المنظفات والمطهرات المتخصصة وأجهزة البخار الحار المناسبة لنوع الأقمشة والأرضيات والرخام.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step-box">
+                        <div class="step-number-badge" style="background: var(--accent-color);">3</div>
+                        <h4 class="fw-bold text-brand-primary fs-5 mb-2">التنفيذ والتعقيم</h4>
+                        <p class="text-secondary small mb-0 lh-lg">
+                            بدء العمل بواسطة الطاقم الفني بدقة متناهية وإزالة أصعب الأوساخ والتعقيم الحراري الفوري للأسطح والمفروشات.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="process-step-box">
+                        <div class="step-number-badge" style="background: var(--primary-color);">4</div>
+                        <h4 class="fw-bold text-brand-primary fs-5 mb-2">الفحص والتسليم</h4>
+                        <p class="text-secondary small mb-0 lh-lg">
+                            فحص شامل لكافة الأركان مع العميل والتأكد من الرضا التام بنسبة 100% وتفعيل الضمان الذهبي لإعادة التنظيف.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       THE GOLDEN GUARANTEE SECTION (NEW SECTION)
+       ========================================================================== -->
+    <section class="py-5 bg-brand-light">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="badge bg-warning text-dark rounded-pill px-3 py-2 fw-bold mb-2">
+                    <i class="fa-solid fa-award me-1"></i> ثقة وضمان بلا حدود
+                </span>
+                <h2 class="fw-heading display-6 text-brand-primary mb-2">الضمان الذهبي لسلطان كلين</h2>
+                <p class="text-secondary">نضع راحتك ورضاك في المقام الأول بضمانات حقيقية وصريحة</p>
+                <div class="mx-auto bg-brand-secondary rounded-pill" style="width: 50px; height: 3.5px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="guarantee-card text-center">
+                        <div class="text-warning display-6 mb-2">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+                        <h5 class="fw-bold text-brand-primary mb-2">إعادة العمل مجاناً</h5>
+                        <p class="text-secondary small mb-0">
+                            في حال وجود أي ملاحظة بعد انتهاء الخدمة، نعيد تنظيف الجزئية مجاناً ودون أي تكلفة إضافية.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="guarantee-card text-center">
+                        <div class="text-brand-secondary display-6 mb-2">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h5 class="fw-bold text-brand-primary mb-2">سلامة الأثاث 100%</h5>
+                        <p class="text-secondary small mb-0">
+                            ضمان كامل لسلامة كافة الأثاث والمفروشات والأجهزة أثناء عمليات التنظيف والتعقيم.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="guarantee-card text-center">
+                        <div class="text-brand-accent display-6 mb-2">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                        </div>
+                        <h5 class="fw-bold text-brand-primary mb-2">أسعار ثابتة وشفافة</h5>
+                        <p class="text-secondary small mb-0">
+                            لا توجد أي رسوم أو تكاليف خفية، ما يتم الاتفاق عليه في المعاينة هو ما تدفعه بالضبط.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="guarantee-card text-center">
+                        <div class="text-brand-primary display-6 mb-2">
+                            <i class="fa-solid fa-clock-check"></i>
+                        </div>
+                        <h5 class="fw-bold text-brand-primary mb-2">دقة المواعيد والالتزام</h5>
+                        <p class="text-secondary small mb-0">
+                            نصل في الوقت المحدد بالدقيقة وننهي العمل ضمن الإطار الزمني المتفق عليه باحترافية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       CUSTOMER TESTIMONIALS SECTION (SOCIAL PROOF)
+       ========================================================================== -->
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="badge bg-brand-primary text-white rounded-pill px-3 py-2 fw-bold mb-2">
+                    <i class="fa-solid fa-comments me-1"></i> ثقة عملائنا سر نجاحنا
+                </span>
+                <h2 class="fw-heading display-6 text-brand-primary mb-2">ماذا يقول عملاؤنا عنا؟</h2>
+                <p class="text-secondary">تجارب حقيقية وتقييمات نفخر بها من عملائنا الكرام في مختلف أحياء الرياض</p>
+                <div class="mx-auto bg-brand-secondary rounded-pill" style="width: 50px; height: 3.5px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Review 1 -->
+                <div class="col-md-4">
+                    <div class="card p-4 rounded-4 border border-brand h-100 shadow-sm">
+                        <div class="text-warning fs-6 mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-secondary lh-lg mb-4 flex-grow-1">
+                            "تعاملت مع سلطان كلين لتنظيف الفيلا بعد أعمال التشطيب والدهان، الصراحة النتيجة فاقت توقعاتي! لمعان الرخام ونظافة النوافذ والأرضيات ممتازة وفريق العمل محترم وسريع جداً."
+                        </p>
+                        <div class="d-flex align-items-center gap-3 pt-3 border-top border-brand">
+                            <div class="bg-brand-light text-brand-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 45px; height: 45px;">
+                                أ.ع
+                            </div>
+                            <div>
+                                <div class="fw-bold text-brand-primary">أبو عبدالله التميمي</div>
+                                <small class="text-muted">حي النرجس - الرياض</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="col-md-4">
+                    <div class="card p-4 rounded-4 border border-brand h-100 shadow-sm">
+                        <div class="text-warning fs-6 mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-secondary lh-lg mb-4 flex-grow-1">
+                            "غسيل الكنب والمجالس بالبخار الحار عندهم شي خيالي! البقع العنيدة اختفت تماماً ورجعت ألوان الكنب كأنها جديدة بدون أي روائح مزعجة. شكراً لكم على الأمانة والاحترافية."
+                        </p>
+                        <div class="d-flex align-items-center gap-3 pt-3 border-top border-brand">
+                            <div class="bg-brand-light text-brand-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 45px; height: 45px;">
+                                س.م
+                            </div>
+                            <div>
+                                <div class="fw-bold text-brand-primary">سارة المنصور</div>
+                                <small class="text-muted">حي الملقا - الرياض</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="col-md-4">
+                    <div class="card p-4 rounded-4 border border-brand h-100 shadow-sm">
+                        <div class="text-warning fs-6 mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-secondary lh-lg mb-4 flex-grow-1">
+                            "شركة ممتازة ومنتظمة بالمواعيد. قمنا بالتعاقد معهم لتنظيف وتعقيم مكاتب الشركة أسبوعياً، ملتزمون بالمعايير والعمالة نظامية وعلى أعلى مستوى من التدريب."
+                        </p>
+                        <div class="d-flex align-items-center gap-3 pt-3 border-top border-brand">
+                            <div class="bg-brand-light text-brand-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width: 45px; height: 45px;">
+                                ف.ش
+                            </div>
+                            <div>
+                                <div class="fw-bold text-brand-primary">م. فهد الشمري</div>
+                                <small class="text-muted">حي الياسمين - الرياض</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       FAQ SECTION (NEW SECTION)
+       ========================================================================== -->
+    <section class="py-5 bg-brand-light">
+        <div class="container py-4">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="badge bg-brand-primary text-white rounded-pill px-3 py-2 fw-bold mb-2">
+                    <i class="fa-solid fa-circle-question me-1"></i> إجابات واضحة
+                </span>
+                <h2 class="fw-heading display-6 text-brand-primary mb-2">الأسئلة الأكثر شيوعاً حول خدماتنا</h2>
+                <p class="text-secondary">كل ما تحتاج معرفته عن كيفية الحجز، المعدات، والضمان المقدم</p>
+                <div class="mx-auto bg-brand-secondary rounded-pill" style="width: 50px; height: 3.5px;"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion custom-accordion" id="aboutFaqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item border mb-3 rounded-4 overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button fw-bold text-brand-primary" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true"
+                                    aria-controls="faqCollapse1">
+                                    <i class="fa-solid fa-question-circle text-brand-secondary me-2"></i>
+                                    هل العمالة فنية ونظامية وتحت إشراف مباشر؟
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" class="accordion-collapse collapse show"
+                                aria-labelledby="faqHeading1" data-bs-parent="#aboutFaqAccordion">
+                                <div class="accordion-body text-secondary lh-lg">
+                                    نعم بالتأكيد، جميع كوادرنا وعمالتنا نظامية 100% ومدربة تدريباً مكثفاً على أحدث أجهزة التنظيف ومواد التعقيم، ويعمل الفريق تحت إشراف فنيين مختصين لضمان أعلى مستويات الجودة والأمانة.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item border mb-3 rounded-4 overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed fw-bold text-brand-primary" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false"
+                                    aria-controls="faqCollapse2">
+                                    <i class="fa-solid fa-question-circle text-brand-secondary me-2"></i>
+                                    هل مواد التنظيف آمنة على الأطفال والمفروشات الحساسة؟
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" class="accordion-collapse collapse"
+                                aria-labelledby="faqHeading2" data-bs-parent="#aboutFaqAccordion">
+                                <div class="accordion-body text-secondary lh-lg">
+                                    نحرص تماماً على استخدام مواد تنظيف وتعقيم ألمانية وأمريكية معتمدة بيئياً وصحياً وخالية من الروائح النفاذة أو الكيماويات الضارة، وهي آمنة تماماً على الأطفال والحيوانات الأليفة وتحافظ على رونق الأقمشة والرخام.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item border mb-3 rounded-4 overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed fw-bold text-brand-primary" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false"
+                                    aria-controls="faqCollapse3">
+                                    <i class="fa-solid fa-question-circle text-brand-secondary me-2"></i>
+                                    ما هي المدة اللازمة لإتمام تنظيف فيلا أو شقة؟
+                                </button>
+                            </h2>
+                            <div id="faqCollapse3" class="accordion-collapse collapse"
+                                aria-labelledby="faqHeading3" data-bs-parent="#aboutFaqAccordion">
+                                <div class="accordion-body text-secondary lh-lg">
+                                    تعتمد المدة على المساحة وحالة الموقع؛ تنظيف الشقق والمجالس يستغرق عادة بين 3 إلى 5 ساعات، بينما تنظيف الفلل الجديدة أو المفروشة بالكامل يتم خلال نفس اليوم عبر إرسال طاقم متكامل ومعدات متعددة للإنجاز السريع.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item border mb-3 rounded-4 overflow-hidden shadow-sm">
+                            <h2 class="accordion-header" id="faqHeading4">
+                                <button class="accordion-button collapsed fw-bold text-brand-primary" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false"
+                                    aria-controls="faqCollapse4">
+                                    <i class="fa-solid fa-question-circle text-brand-secondary me-2"></i>
+                                    كيف يمكنني حجز موعد والحصول على الخصم الحصري 35%؟
+                                </button>
+                            </h2>
+                            <div id="faqCollapse4" class="accordion-collapse collapse"
+                                aria-labelledby="faqHeading4" data-bs-parent="#aboutFaqAccordion">
+                                <div class="accordion-body text-secondary lh-lg">
+                                    يمكنك الحجز بسهولة وسرعة عبر الاتصال المباشر على الرقم <a href="tel:+966582102525" class="fw-bold text-brand-primary text-decoration-none">0582102525</a> أو عبر مراسلتنا فوراً على الواتساب، وسيتم تطبيق خصم 35% وتحديد موعد المعاينة المجانية في الوقت الذي يناسبك.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       GIANT CTA BANNER
+       ========================================================================== -->
+    <section class="py-5 bg-brand-primary text-white text-center">
+        <div class="container py-3">
+            <span class="badge bg-brand-accent px-3 py-2 rounded-pill fw-bold mb-3">🔥 عرض حصري لعملاء الموقع</span>
+            <h2 class="display-6 fw-heading text-white mb-3">احصل على خصم 35% ومعاينة مجانية لمنزلك اليوم</h2>
+            <p class="lead text-white text-opacity-75 max-w-700 mx-auto mb-4 fs-6">
+                انضم إلى آلاف العائلات والشركات التي تثق في خدمات سلطان كلين. تواصل معنا الآن هاتفياً أو عبر الواتساب!
+            </p>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="tel:+966582102525" class="btn btn-light text-brand-primary btn-lg rounded-pill px-5 fw-bold shadow">
+                    <i class="fa-solid fa-phone-volume me-2 text-brand-secondary"></i> اتصل الآن: 0582102525
+                </a>
+                <a href="https://wa.me/966582102525?text=مرحباً%20سلطان%20كلين،%20أود%20طلب%20خدمة%20معاينة%20وتنظيف%20مع%20خصم%2035%"
+                    target="_blank" class="btn btn-brand-whatsapp btn-lg rounded-pill px-5 fw-bold shadow">
+                    <i class="fa-brands fa-whatsapp fs-5 me-2"></i> حجز سريع عبر واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
     <footer class="bg-brand-primary text-white pt-5 pb-4">
-        <div class="container text-center small text-white-50">
-            جميع الحقوق محفوظة © 2026 <strong>سلطان كلين</strong> | كود الخصم: <strong
-                class="text-brand-secondary">SULTAN35</strong>
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="rounded-3 bg-white text-brand-primary d-flex align-items-center justify-content-center"
+                            style="width: 40px; height: 40px; font-size: 1.2rem">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <span class="fw-heading fs-4 text-white">سلطان <span
+                                class="text-brand-secondary">كلين</span></span>
+                    </div>
+                    <p class="text-white-50 small mb-3">
+                        الرائدون في تقديم أرقى خدمات التنظيف المنزلي والمكتبي، تنظيف
+                        الفلل، وغسيل الكنب والسجاد بالبخار بأعلى معايير الجودة.
+                    </p>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h5 class="fw-bold mb-3 text-white">روابط سريعة</h5>
+                    <ul class="list-unstyled small text-white-50 d-flex flex-column gap-2">
+                        <li>
+                            <a href="index.html" class="text-white-50 text-decoration-none">الرئيسية</a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="text-white-50 text-decoration-none">خدماتنا</a>
+                        </li>
+                        <li>
+                            <a href="index.html#blog" class="text-white-50 text-decoration-none">المدونة والنصائح</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-white-50 text-decoration-none">من نحن</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-white-50 text-decoration-none">اتصل بنا</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h5 class="fw-bold mb-3 text-white">أبرز الخدمات</h5>
+                    <ul class="list-unstyled small text-white-50 d-flex flex-column gap-2">
+                        <li>
+                            <a href="services.html" class="text-white-50 text-decoration-none">تنظيف الفلل والقصور</a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="text-white-50 text-decoration-none">تنظيف الكنب بالبخار</a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="text-white-50 text-decoration-none">غسيل السجاد والموكيت</a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="text-white-50 text-decoration-none">جلي وتلميع الرخام</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-3 text-white">تواصل مباشر</h5>
+                    <div class="d-flex flex-column gap-2 small text-white-50">
+                        <div>
+                            <i class="fa-solid fa-phone text-brand-secondary me-2"></i>
+                            <a href="tel:+966582102525" class="text-white text-decoration-none fw-bold">0582102525</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-whatsapp text-brand-accent me-2"></i>
+                            <a href="https://wa.me/966582102525" target="_blank"
+                                class="text-white text-decoration-none">واتساب خدمة العملاء</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-location-dot text-brand-secondary me-2"></i>
+                            نغطي كافة أحياء الرياض ومناطق المملكة
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="pt-3 border-top border-white border-opacity-10 d-flex justify-content-between align-items-center flex-wrap gap-2 small text-white-50">
+                <div>جميع الحقوق محفوظة © 2026 <strong>سلطان كلين</strong></div>
+                <div>
+                    تم التصميم والبرمجة بواسطة
+                    <a href="#" class="text-brand-secondary">
+                        عبدالله الزيات
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Floating Buttons -->
+    <!-- Floating Actions (WhatsApp & Direct Call) -->
     <div class="floating-bar">
-        <a href="https://wa.me/966582102525" target="_blank" class="floating-circle-btn floating-whatsapp"><i
-                class="fa-brands fa-whatsapp"></i></a>
-        <a href="tel:+966582102525" class="floating-circle-btn floating-call"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/966582102525?text=مرحباً%20سلطان%20كلين،%20أود%20طلب%20خدمة%20مع%20خصم%2035%"
+            target="_blank" class="floating-circle-btn floating-whatsapp" title="تواصل عبر الواتساب">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+966582102525" class="floating-circle-btn floating-call" title="اتصال مباشر الآن">
+            <i class="fa-solid fa-phone"></i>
+        </a>
     </div>
 
+    <!-- Bootstrap 5 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Theme JS -->
     <script src="js/main.js"></script>
 </body>
 
