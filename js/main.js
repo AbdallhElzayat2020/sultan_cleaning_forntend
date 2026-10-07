@@ -179,7 +179,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 9. Simple Toast Notification
+  // 9. Scroll To Top Button (Auto-injected if not present + smooth scroll)
+  let scrollBtn = document.getElementById('scrollTopBtn');
+  if (!scrollBtn) {
+    scrollBtn = document.createElement('button');
+    scrollBtn.id = 'scrollTopBtn';
+    scrollBtn.className = 'scroll-top-btn';
+    scrollBtn.setAttribute('aria-label', 'العودة للأعلى');
+    scrollBtn.setAttribute('title', 'العودة لأعلى الصفحة');
+    scrollBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    document.body.appendChild(scrollBtn);
+  }
+
+  const handleScrollBtn = () => {
+    if (window.scrollY > 280) {
+      scrollBtn.classList.add('show');
+    } else {
+      scrollBtn.classList.remove('show');
+    }
+  };
+
+  window.addEventListener('scroll', handleScrollBtn, { passive: true });
+  handleScrollBtn();
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // 10. Simple Toast Notification
   function showToast(text) {
     let toast = document.querySelector('.toast-msg');
     if (!toast) {
