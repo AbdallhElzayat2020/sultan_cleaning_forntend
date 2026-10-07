@@ -506,3 +506,104 @@ h6,
 .toast-msg.show {
     transform: translateX(-50%) translateY(0);
 }
+
+/* ==========================================================================
+   STICKY MOBILE BOTTOM ACTION BAR
+   ========================================================================== */
+.mobile-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(11, 61, 145, 0.12);
+    padding: 10px 14px;
+    z-index: 1040;
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-bottom-bar .btn {
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 12px 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+}
+
+@media (max-width: 767.98px) {
+    body {
+        padding-bottom: 74px;
+    }
+    .floating-bar {
+        bottom: 82px;
+        left: 16px;
+    }
+    .floating-circle-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.35rem;
+    }
+}
+
+/* ==========================================================================
+   GALLERY / PORTFOLIO STYLES
+   ========================================================================== */
+.gallery-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 16px 36px rgba(11, 61, 145, 0.12);
+}
+
+.gallery-img-box {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+}
+
+.gallery-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-img-box img {
+    transform: scale(1.08);
+}
+
+.gallery-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-tag-pill {
+    background: var(--bg-light);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    border-radius: 50px;
+}

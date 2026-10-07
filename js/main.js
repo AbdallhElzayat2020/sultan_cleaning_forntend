@@ -133,7 +133,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Simple Toast Notification
+  // 7. Gallery Lightbox Modal Handler
+  document.querySelectorAll('[data-gallery-img]').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const imgSrc = item.getAttribute('data-gallery-img');
+      const title = item.getAttribute('data-gallery-title') || 'معرض أعمال سلطان كلين';
+      const category = item.getAttribute('data-gallery-cat') || 'خدمة نظافة متخصصة';
+      const location = item.getAttribute('data-gallery-location') || 'الرياض';
+
+      const modalEl = document.getElementById('galleryLightboxModal');
+      if (modalEl) {
+        const modalImg = modalEl.querySelector('#lightboxImg');
+        const modalTitle = modalEl.querySelector('#lightboxTitle');
+        const modalCat = modalEl.querySelector('#lightboxCategory');
+        const modalLoc = modalEl.querySelector('#lightboxLocation');
+        const modalWaBtn = modalEl.querySelector('#lightboxWaBtn');
+
+        if (modalImg) modalImg.src = imgSrc;
+        if (modalTitle) modalTitle.textContent = title;
+        if (modalCat) modalCat.textContent = category;
+        if (modalLoc) modalLoc.textContent = location;
+        if (modalWaBtn) {
+          const waMsg = `مرحباً سلطان كلين 🌟 شاهدت صورة عملكم في المعرض (${title} - ${location}) وأرغب في طلب نفس الخدمة مع خصم 35%`;
+          modalWaBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMsg)}`;
+        }
+
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+      }
+    });
+  });
+
+  // 8. Simple Toast Notification
   function showToast(text) {
     let toast = document.querySelector('.toast-msg');
     if (!toast) {
