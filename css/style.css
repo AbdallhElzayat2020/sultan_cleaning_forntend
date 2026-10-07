@@ -1,0 +1,449 @@
+/* ==========================================================================
+   SULTAN CLEANING - CUSTOM THEME (BOOTSTRAP 5 RTL EXTENSION)
+   Brand Colors:
+   Primary:          #0B3D91
+   Secondary:        #00B4E6
+   Accent:           #34C759
+   Background:       #FFFFFF
+   Light Background: #E8F2F8
+   Text Primary:     #15324B
+   Text Secondary:   #607080
+   Border:           #D9E6EF
+   Primary Hover:    #082F70
+   Secondary Hover:  #0098C4
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+:root {
+    --primary-color: #0b3d91;
+    --primary-hover: #082f70;
+    --secondary-color: #00b4e6;
+    --secondary-hover: #0098c4;
+    --accent-color: #34c759;
+    --bg-light: #e8f2f8;
+    --text-primary: #15324b;
+    --text-secondary: #607080;
+    --border-color: #d9e6ef;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    color: var(--text-primary);
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.fw-heading {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+/* Custom Backgrounds & Colors */
+.bg-brand-primary {
+    background-color: var(--primary-color) !important;
+    color: #fff;
+}
+
+.bg-brand-secondary {
+    background-color: var(--secondary-color) !important;
+    color: #fff;
+}
+
+.bg-brand-accent {
+    background-color: var(--accent-color) !important;
+    color: #fff;
+}
+
+.bg-brand-light {
+    background-color: var(--bg-light) !important;
+}
+
+.text-brand-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-brand-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.text-brand-accent {
+    color: var(--accent-color) !important;
+}
+
+.border-brand {
+    border-color: var(--border-color) !important;
+}
+
+/* Custom Buttons */
+.btn-brand-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #114fb5 100%);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(11, 61, 145, 0.28);
+    transition: all 0.3s ease;
+}
+
+.btn-brand-primary:hover {
+    background: var(--primary-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(11, 61, 145, 0.4);
+}
+
+.btn-brand-secondary {
+    background: linear-gradient(135deg,
+            var(--secondary-color) 0%,
+            var(--secondary-hover) 100%);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 180, 230, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-brand-secondary:hover {
+    background: var(--secondary-hover);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-brand-whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #1cbd59 100%);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-brand-whatsapp:hover {
+    background: #1eb956;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-outline-brand {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    padding: 11px 22px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-brand:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Header & Navbar */
+.main-navbar {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.96) !important;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    font-weight: 700;
+    color: var(--text-primary) !important;
+    padding: 8px 14px !important;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-wrapper {
+    background: linear-gradient(135deg, #f0f7fc 0%, #ffffff 60%, #e8f4fa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img-box img {
+    border-radius: 28px;
+    border: 5px solid #fff;
+    box-shadow: 0 20px 45px rgba(11, 61, 145, 0.18);
+    height: 440px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Feature & Service Cards */
+.custom-card {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.custom-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(11, 61, 145, 0.12);
+    border-color: rgba(0, 180, 230, 0.4);
+}
+
+/* Minimalist Clean Service Cards (matching requested design with brand colors) */
+.service-clean-card {
+    background: #ffffff;
+    border: 1.5px solid var(--border-color);
+    border-radius: 18px;
+    padding: 38px 26px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.service-clean-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 12px 30px rgba(11, 61, 145, 0.08);
+}
+
+.service-clean-icon {
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+}
+
+.service-clean-card:hover .service-clean-icon {
+    transform: scale(1.12);
+    color: var(--primary-color);
+}
+
+.service-clean-title {
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.service-clean-desc {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.service-clean-link {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.service-clean-link i {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.service-clean-card:hover .service-clean-link {
+    color: var(--secondary-color);
+}
+
+.service-clean-card:hover .service-clean-link i {
+    transform: translateX(-4px);
+}
+
+.card-icon-bubble {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.service-card-img {
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Promo Banner */
+.promo-box {
+    background: linear-gradient(135deg,
+            var(--primary-color) 0%,
+            #0d469e 60%,
+            #062b66 100%);
+    border-radius: 24px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 45px rgba(11, 61, 145, 0.28);
+}
+
+.timer-pill {
+    background: #fff;
+    color: var(--primary-color);
+    min-width: 65px;
+    padding: 10px 6px;
+    border-radius: 12px;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* Before & After Interactive Slider */
+.ba-slider {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    aspect-ratio: 16 / 9;
+    background: #000;
+    user-select: none;
+}
+
+.ba-before,
+.ba-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ba-before img,
+.ba-after img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ba-before {
+    width: 50%;
+    overflow: hidden;
+    z-index: 2;
+    border-left: 3px solid #fff;
+}
+
+.ba-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #fff;
+    z-index: 10;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.ba-handle-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.ba-slider input[type='range'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 20;
+}
+
+/* Floating Actions Bar (WhatsApp & Call) */
+.floating-bar {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1050;
+}
+
+.floating-circle-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff !important;
+    font-size: 1.6rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    transition: transform 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.floating-circle-btn:hover {
+    transform: scale(1.12);
+}
+
+.floating-whatsapp {
+    background: #25d366;
+}
+
+.floating-call {
+    background: var(--primary-color);
+}
+
+/* Toast */
+.toast-msg {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px);
+    background: #15324b;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    z-index: 2000;
+    transition: transform 0.4s ease;
+}
+
+.toast-msg.show {
+    transform: translateX(-50%) translateY(0);
+}
