@@ -165,7 +165,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 8. Simple Toast Notification
+  // 8. Auto-close mobile navbar on link click
+  const navCollapse = document.getElementById('mainNav');
+  if (navCollapse) {
+    const navLinks = navCollapse.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 992 && navCollapse.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navCollapse) || new bootstrap.Collapse(navCollapse, { toggle: false });
+          bsCollapse.hide();
+        }
+      });
+    });
+  }
+
+  // 9. Simple Toast Notification
   function showToast(text) {
     let toast = document.querySelector('.toast-msg');
     if (!toast) {
@@ -178,3 +192,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => toast.classList.remove('show'), 3500);
   }
 });
+
